@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/2149b27acd.js" crossorigin="anonymous"></script>
+    <title>Fabverse</title>
+    
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* body{
+        background-color: rgb(9, 8, 19);
+    } */
+
+    #container {
+
+        margin: auto;
+        max-width: 1400px;
+        position: relative;
+    }
+
+    .slide-cont {
+        display: flex;
+        height: 500px;
+        position: relative;
+        margin-top: 50px;
+
+
+    }
+
+    .img-slider {
+        display: none;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .slide-but {
+        border: none;
+        background: transparent;
+        height: 50px;
+        align-self: center;
+        font-size: x-large;
+        position: absolute;
+        cursor: pointer;
+        padding: 10px;
+        color: #8aeef5;
+        opacity: 0.5;
+
+
+    }
+
+    .slide-but:hover {
+        /* color: #8aeef5; */
+        opacity: 1;
+    }
+
+    #next {
+        padding-left: 0px;
+        margin-left: -2.5%;
+        position: relative;
+    }
+
+    .smooth {
+        animation: smooth-transition 1.8s;
+
+    }
+
+    /* name duration timing-function delay iteration-count direction fill-mode; */
+
+    @keyframes smooth-transition {
+        from {
+            opacity: 0.6;
+            transform: translateX(var(--transval));
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    body {
+        background-color: var(--bgcolor);
+    }
+
+    #mode {
+        padding: 10px 12px;
+        border-radius: 5px;
+        background-color: rgb(9, 8, 19);
+        color: antiquewhite;
+        cursor: pointer;
+    }
+
+    #mode-l {
+        padding: 10px 12px;
+        border-radius: 5px;
+        background-color: rgb(252, 243, 191);
+        color: rgb(34, 33, 33);
+        margin-left: 8px;
+        cursor: pointer;
+    }
+
+    #mode:hover {
+        box-shadow: 5px 5px gray;
+    }
+
+    #mode-l:hover {
+        box-shadow: 5px 5px rgb(233, 233, 184);
+    }
+
+    .modecontrol {
+        margin-left: 80%;
+        margin-top: 20px;
+    }
+
+    #container2 {
+        display: flex;
+        /* border: 2px solid white; */
+        width: 70%;
+        margin-top: 50px;
+        padding: 10px;
+        margin: auto;
+        max-width: 1400px;
+        min-width: 1400px;
+        margin-bottom: 250px;
+        position: relative;
+    }
+
+    .products {
+        /* border: 2px solid white; */
+        height: 500px;
+        width: 300px;
+        min-width: 300px;
+        max-width: 300px;
+        margin: 50px;
+        border-radius: 15px;
+        color: aliceblue;
+        display: none;
+        box-shadow: 2px 2px 2px 2px rgba(214, 214, 214, 0.2), 0 6px 6px 0 rgba(231, 230, 230, 0.19);
+        position: relative;
+    }
+
+    .prod-but {
+        align-self: center;
+        width: 55px;
+        height: 50px;
+        font-size: x-large;
+        padding: 10px;
+        border-radius: 30px;
+        cursor: pointer;
+        background-color: antiquewhite;
+        opacity: 0.5;
+    }
+
+    .prod-but:hover {
+        opacity: 0.8;
+    }
+
+    .anime {
+        animation: anime-trans 2s;
+    }
+
+    @keyframes anime-trans {
+
+        from {
+            opacity: 0.6;
+            transform: translateX(var(--tr));
+        }
+
+        to {
+            opacity: 1;
+        }
+
+    }
+
+    .design {
+        background:  rgb(87, 117, 117);
+        border: none;
+
+    }
+
+    .designer{
+        margin-top: 30px;
+        width: 120px;
+        height: 50px;
+        background: transparent;
+        border: 3px solid white;
+        color: white;
+        font-size: large;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .designer:hover{
+        background-color:rgb(82, 110, 110);
+        color: rgb(194, 204, 212);
+        border: 3px solid rgb(194, 204, 212);
+        box-shadow: 0 4px 8px 0 rgba(214, 214, 214, 0.2), 0 6px 20px 0 rgba(231, 230, 230, 0.19);
+    }
+
+    .cards{
+        width: 380px;
+        height: 250px;
+        min-width: 380px;
+        min-height: 250px;
+        margin: 50px;
+        border-radius: 20px;
+        background: rgba(0,0,0,0.5);
+        background:rgba(127,127,127,0.25);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        
+        /* margin-left: 90px; */
+        /* box-shadow: 10px 10px 10px 10px rgba(255, 249, 249, 0.2), 20px 20px 20px 10px rgba(255, 251, 251, 0.19); */
+        
+    }
+    #container3{
+        display: flex;
+        justify-content: center;
+        width: 80%;
+        margin-bottom: 200px;
+        /* border: 2px solid white;
+         */
+    }
+
+   
+    .shadow{
+        width: 210px;
+        height: 150px;
+        background-color: #ce6230;
+        position: absolute;
+        margin-left:5.5%;
+        margin-top:-3% ;
+        border-radius: 50%;
+        filter: blur(35px);
+        z-index: -1;
+    }
+
+    .hbar{
+        height: 0.3em;
+        background: linear-gradient(90deg, rgba(72,252,139,0) 0%,#48fc8b 50%,rgba(72,252,130,0) 100%);
+        filter: drop-shadow(0 0 0.5em #48fc8b);
+        bottom: -0.5em;
+        margin: 0 200px;
+    }
+
+    .vbar{
+        height: 100px;
+        width: 0.3em;
+        background: linear-gradient(0deg, rgba(72,252,139,0) 0%,#48fc8b 50%,rgba(72,252,130,0) 100%);
+        filter: drop-shadow(0 0 0.5em #48fc8b);
+        margin: 0 200px;
+    }
+
+    .card-info{
+        font-size: 20px;
+         width: 200px; 
+         color: rgb(139, 141, 141);
+    }
+
+    :nth-child(2) .shadow{
+        background: #fdd25c;
+    }
+
+    :nth-child(3) .shadow{
+       background: rgb(100, 40, 17);
+    }
+
+    .card-img{
+        width: 150px;
+        margin-top: -20%;
+        margin-left: 5%;
+        position: relative;
+        align-self: center;
+    }
+
+#navbar{
+        /* border: 2px solid white; */
+        text-align: center;
+    }
+
+  
+
+#navbar ul li a{
+    display: block;
+    text-decoration: none; 
+    font-size: 20px;
+    color: whitesmoke;
+}
+
+#list{
+    display: inline-flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.item{
+    width: 150px;
+    height: 60px;
+    text-align: center;
+    align-self: center;
+    padding: 20px;
+    margin-left: 20px;
+    /* border: 2px solid white; */
+}
+
+#navbar ul li a:hover{
+      text-shadow: 0 0 5px rgb(175, 175, 179), 0 0 5px #bbbbc4;
+}
+
+#decor{
+    height: 700px;
+    /* background-image: url(https://ak.picdn.net/shutterstock/videos/1021881019/thumb/1.jpg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: center;
+    background-size: 100%;  */
+    
+    
+}
+
+.sub-menu-1{
+    /* border: 2px solid white; */
+    width: 300px;
+    height: 70px;
+    /* padding: 10px 10px; */
+    justify-content: center;
+    border-radius: 10px;
+    margin-top: 20px;
+    opacity: 0.8;
+    background-color: rgb(39, 25, 51);
+    display: none;
+    z-index: 100;
+}
+
+.sub-menu-1 ul{
+    display: inline-flex;
+}
+
+.sub-menu-1 ul li{
+    height: 56px;
+    text-align: center;
+    padding-top: 6px;
+   margin-top: 3px;
+    /* border-radius: 10px; */
+    border-right: 1px solid white;
+
+
+}
+
+#sub{
+    list-style:none;
+    margin: 2px;
+}
+
+#pro:hover .sub-menu-1{
+    display: block;
+}
+
+.sub-menu-1:hover .sub-menu-1{
+    display: block;
+}
+
+h4{
+    margin-left: 52%;
+    font-size: 80px;
+    color: azure;
+    top: 0;
+  left: 0;
+    /* z-index: -1; */
+}
+
+#login{
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    align-self: center;
+    cursor: pointer;
+    position: absolute;
+    margin-left: 55%;
+    border: none;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: bold;
+    background: linear-gradient(rgb(123, 231, 123),rgb(83, 219, 208));
+}
+
+#login:hover{
+color: rgb(255, 247, 247);
+}
+
+
+.join{
+    margin-left: 30px;
+    width:180px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    background: linear-gradient(rgb(123, 231, 123),rgb(83, 219, 208));
+}
+
+.join:hover{
+    color: rgb(255, 250, 250);
+
+}
+    
+.foot{
+    width: 100%;
+    height: 600px;
+    background:linear-gradient(#461a6b,rgb(96, 58, 231));
+}
+
+#search-but{
+    font-weight: bold; 
+    font-size: 30px; 
+    background: linear-gradient(rgb(126, 90, 146),rgb(95, 3, 241)) ; 
+    height: 55px;
+    width: 200px;
+     text-align: center;
+     padding: 8px;
+     border-top-left-radius: 5px;
+     border-bottom-left-radius: 5px;
+     margin-left: 15%;
+}
+
+input{
+    width: 900px;
+    height: 70px;
+    margin-left: 19%;
+    margin-bottom: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+     padding-left: 20px;
+     font-size: 26px;
+     font-weight: bold;
+     border: none;
+     outline: none;
+     
+    
+}
+
+.srch{
+    margin-top:10% ;
+    margin-bottom: 8%;
+}
+
+#search-icon{
+    height: 70px;
+    width: 70px;
+    padding-top: 24px;
+    padding-left: 15px;
+    margin-left: 18%;
+    margin-right: -19.5%;
+    border: 2px solid rgb(192, 189, 189);
+    background-color: rgb(233, 230, 230);
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.shop{
+    /* border: 2px solid wheat; */
+    width: 100%;
+    height: auto;
+    margin-top: 5%;
+    margin-bottom: 20%;
+}
+
+.category{
+
+justify-content: center;
+/* border: 2px solid wheat; */
+
+}
+
+.category div {
+    border: 10px solid white;
+    border-bottom: 60px solid white;
+    width: 300px;
+    height: 350px;
+    margin-left: 20px;
+    margin-top: 10px;
+    background-color: rgb(46, 45, 45);
+    
+}
+
+.cat:nth-child(1){
+    background-image: url(https://th.bing.com/th/id/OIP.3SxMYr_VjFmvGsOyHaIRFwHaLI?pid=ImgDet&rs=1);
+    background-size: 99.8%;
+}
+
+.cat:nth-child(2){
+    background-image: url('https://s3.amazonaws.com/attachments.infoisinfo.com/categories/footwear%20(2).jpg');
+    background-size: 130%;
+    background-position: 40%;
+}
+
+.cat:nth-child(3){
+    background-image: url(https://trendvolt.com/wp-content/uploads/2019/10/6171-jrmvkt.jpg);
+    background-size: 99.8%;
+}
+
+.cat:nth-child(4){
+    background-image: url(https://5.imimg.com/data5/SELLER/Default/2021/2/PO/IU/YK/25824015/red-yoke-and-parrot-motif-panel-embroidered-keida-and-navy-blue-tulip-pants-set-3.jpg);
+    background-size: 99.8%;
+    background-position: 0px -10px;
+}
+
+.cat2:nth-child(1){
+    background-image: url(https://th.bing.com/th/id/R.138232110a43daf59487cc5d919b35f1?rik=WU0m22talhuP8g&riu=http%3a%2f%2fmenscraze.com%2fwp-content%2fuploads%2f2016%2f05%2fmenswear-2016-business-mens-fashion.jpg&ehk=G34gXYZl2PW4Vj4fHdtcUHceKMjboYkyFW6jQVaqF%2bg%3d&risl=&pid=ImgRaw&r=0);
+    background-size: 100%;
+    background-position: 0px -1px;
+}
+
+
+.cat2:nth-child(2){
+    background-image: url(https://guhaha.com/wp-content/uploads/2020/06/H7877ff1250ff4393a3b7b6c42d70a153B-1.jpg);
+    background-size: 104%;
+    background-position: 0px -10px;
+}
+
+
+
+.cat2:nth-child(3){
+    background-image: url(https://www.machovibes.com/wp-content/uploads/2017/12/All-Time-Best-Formal-Outfits-For-Men-2.jpg);
+    background-size: 100%;
+    background-position: 0px -10px;
+}
+
+
+.cat2:nth-child(4){
+    background-image: url(https://imgmedia.lbb.in/media/2019/04/5caf784d6e20a824c4cd7526_1555003469154.jpg);
+    background-size: 110%;
+    background-position: 0px -1px;
+}
+
+#cart{
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    background-color: #d6bb23;
+    border: none;
+    margin-left: 90%;
+    margin-top: 40%;
+    z-index: 100;
+    cursor: pointer;
+    position: fixed;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+</style>
+
+<body>
+    <button id="cart">
+        <i class="fa-solid fa-cart-shopping fa-2xl" style="color: #312c01;"></i>
+    </button>
+
+<div id="decor">
+    <div id="navbar">
+        <img style=" opacity: 0.75; margin-left: -30%; z-index: -1; position: absolute;width:100%;height: 700px;object-fit: cover;object-position: 80% 7%;" src="https://www.fashiongonerogue.com/wp-content/uploads/2014/12/nicki-minaj-roberto-cavalli-spring-2015-ad-campaign02-600x441.jpg" alt="">
+        <img style="margin-left: -30%;position: absolute; width:100%;height: 700px; opacity: 0.7;z-index: -1; object-fit: cover;" src="https://ak.picdn.net/shutterstock/videos/1021881019/thumb/1.jpg" alt="">
+        <!-- <div id="logo">
+            <img src="./IMAGES/LOGO1.png" alt="">
+        </div> -->
+        <!-- <div id="logo">
+            <img src="./IMAGES/logo22.jpg" alt="">
+        </div> -->
+        <ul id="list" style="margin-top: 3%;">
+            <li class="item"><a href="#">Home</a></li>
+            <li id="pro" class="item"><a href="#">Products</a>
+                <div class="sub-menu-1">
+                    <ul id="sub">
+                        <li  class="item1"><a href="collections.html">Latest Collections</a></li>
+                        <li  class="item1"><a href="#">Latest Designs</a></li>
+                        <li  class="item1" style="border: none;"><a href="#">Famous Designs</a></li>
+                    </ul>
+                </div>
+            
+            </li>
+
+            <li class="item"><a href="#">About Us</a></li>
+            <li class="item"><a href="#">Contact Us</a></li>
+            <button type="button" id="login">Login</button>
+        </ul>
+    </div>
+<br><br><br><br><br>
+
+<p style="width: 250px; margin-left: 32%;margin-top: 15px;position: absolute; font-size: 20px;color: rgb(192, 197, 197);" >Select and browse through latest fashions.Be most trendy in town </p>
+<div style="margin-left: 49%;margin-top:-2px;position: absolute;" class="vbar"></div>
+<h4>BE TRENDY</h4>
+
+<h4 style="margin-left: 30%;margin-top: 100px;" >BE BOLD</h4>
+<div style="margin-left:55%;margin-top:-6%;position: absolute;" class="vbar"></div>
+<p style="width: 250px; margin-left: 58%;margin-top: -5%;position: absolute; font-size: 20px;color: rgb(192, 197, 197);" >Don't bound yourself with orthodox styles. Go strong, go bold.</p>
+
+<button class="join" style=" margin-left:40% ;margin-top: 5%;" >Customize outfits</button> 
+<button class="join" style="background: transparent;border :3px solid rgb(123, 231, 123); color: aliceblue; " >Learn More</button>
+
+</div>
+  
+
+    <div class="modecontrol">
+        <button type="button" id="mode">Dark mode 🌙</button>
+        <button type="button" id="mode-l">Light mode 🌞</button>
+    </div>
+    <main id="container">
+
+
+
+    <!-- SEARCH DIV -->
+
+  <div class="srch">
+    <form style="display: flex;" action="">
+        <div id="search-icon"><i class="fa-solid fa-magnifying-glass fa-2xl" style="color: rgb(110, 107, 107);" ></i></div>
+        <input type="search" placeholder="Search for products,artists,collections and more..." >
+    </form>
+   
+  </div>
+
+
+        <div class="slide-cont">
+            <img style="width: 1400px; height: 500px; display: block;object-position: 10% 19%;"
+                src="https://th.bing.com/th/id/R.4b72d6d83fe02ad44c11972bfabd4d24?rik=b%2bDiafYHC4N2Dg&riu=http%3a%2f%2fv3wall.com%2fwallpaper%2f1024_768%2f1103%2f1024_768_20110304122225220036.jpg&ehk=h0FlvsKJJNrsiGKuLkFGnUVnon%2f0aec0%2fDKLV%2fUrKqo%3d&risl=&pid=ImgRaw&r=0" alt=""
+                class="img-slider smooth">
+            <img style="width: 1400px; height: 500px;"
+                src="https://3.bp.blogspot.com/-7LgXrheMXS4/WMLSHTntRSI/AAAAAAAAAPM/EuOEE6kaZck4gX4_Nimo4SLYHRs6yTrfwCLcB/s1600/IMG_1049913.jpg"
+                alt="" class="img-slider smooth">
+            <img style="width: 1400px; height: 500px; object-position: 80% 40%;"
+                src="https://th.bing.com/th/id/R.768a408878f77635eb932471d5a8ea83?rik=X0U3gy%2btz5KUDg&riu=http%3a%2f%2fwww.v3wall.com%2fwallpaper%2f1024_768%2f1103%2f1024_768_20110302121006611376.jpg&ehk=q6bTPjkY%2bu9T7%2faBfHa8VshysJ0aA7jBdH9HOC4BkK8%3d&risl=&pid=ImgRaw&r=0" alt=""
+                class="img-slider smooth">
+            <img style="width: 1400px; height: 500px;object-position: 80% 30%;" src="https://thumbs.dreamstime.com/b/fashion-couple-white-background-valentine-s-day-fashion-couple-white-background-valentine-s-day-beautiful-fashion-105077029.jpg" alt=""
+                class="img-slider smooth">
+
+            <button type="button" class="slide-but" onclick="prevslide()" id="prev"><i
+                    class="fa-solid fa-caret-left fa-2xl"></i></button>
+            <button type="button" class="slide-but" onclick="nextslide()" id="next"><i
+                    class="fa-solid fa-caret-right fa-2xl"></i></button>
+        </div>
+        <br><br><br>
+
+    </main><br><br><br><br><br>
+
+    <center>
+        <div class="shop">
+            <h4 style="margin-left: 3%;margin-bottom: 50px;" >Shop by categories</h4>
+            <div class="hbar" style="width: 850px; margin-bottom: 150px; margin-left: 15%;"></div>
+            <table class="cat-table" >
+                <tr >
+                    <div class="category" style="display: flex;" >
+                    <div class="cat"><h4 style=" font-size: 30px; margin-left: -1%;margin-top:104%;color: black; width: 95%;" >Women</h4></div>
+                    <div class="cat"> <h4 style=" font-size: 30px; margin-left: -1%;margin-top:104%;color: black; width: 95%;" >Footwear</h4></div>
+                    <div class="cat"> <h4 style=" font-size: 30px; margin-left: -1%;margin-top:104%;color: black; width: 95%;" >Hand Bags</h4></div>
+                    <div class="cat"> <h4 style=" font-size: 30px; margin-left: -1%;margin-top:104%;color: black; width: 95%;" >Ethnic</h4></div>
+                </div>
+                </tr>
+
+                <tr >
+                    <div class="category" style="display: flex;" >
+                    <div class="cat2"><h4 style=" font-size: 30px; margin-left: -1%;margin-top:104%;color: black; width: 95%;" >Men</h4></div>
+                    <div class="cat2"><h4 style=" font-size: 30px; margin-left: -1%;margin-top:104%;color: black; width: 95%;" >Shoes</h4></div>
+                    <div class="cat2"><h4 style=" font-size: 30px; margin-left: -1%;margin-top:104%;color: black; width: 95%;" >Formals</h4></div>
+                    <div class="cat2"><h4 style=" font-size: 30px; margin-left: -1%;margin-top:104%;color: black; width: 95%;" >Traditionals</h4></div>
+                </div>
+                    
+                </tr>
+            </table>
+        </div>
+    </center>
+
+    
+    
+    <center>
+        <h4 style="margin-left: -0.5%;margin-bottom: 30px;" >Our top designers</h4>
+        <div style="width: 45%;margin-bottom: 130px;" class="hbar"></div>
+        <div id="container2">
+            <button type="button" id="proprev" class="prod-but"><i class="fa-solid fa-caret-left fa-xl"></i></button>
+            <div style="display: block;" class="products anime design">
+                <img style="width: 300px; height: 40%; object-fit: cover; border-radius: 15px;"
+                    src="https://s-media-cache-ak0.pinimg.com/736x/c2/c8/75/c2c875382bad9d7a0c634b920e6f6ca9.jpg"
+                    alt="">
+                <img style="width: 110px; border-radius: 50%;margin-top: -10%;border: 9px solid rgb(87, 117, 117);"
+                    src="https://th.bing.com/th/id/R.01c7ef78b81c8b939672522a4c6c64e0?rik=WCwi1ncZSJgZ8w&riu=http%3a%2f%2fi.imgur.com%2frDUMj9T.jpg&ehk=aEtfyQ3WVCwED4IdYtPCrqzLmBkDDtZ4r%2f85PaxM2Yo%3d&risl=&pid=ImgRaw&r=0"
+                    alt="">
+                <h1>John Allister</h1><br>
+                <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
+                <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
+                <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
+                <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
+                <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i></i><br><br>
+                <button type="button" class="designer">Follow</button>
+            </div>
+
+            <div style="display: block;" class="products anime design">
+                <img style="width: 300px; height: 40%; object-fit: cover; border-radius: 15px;"
+                src="https://th.bing.com/th/id/R.e1e7a8b031b7b359d2b9df1262b4f2c2?rik=m8ecFFjXNjpNLA&riu=http%3a%2f%2fcdn.lightgalleries.net%2f4d80d92265da9%2fimages%2fAlex_Perry_0305-1.jpg&ehk=0ljmHddTD1%2fX50uQAhSq8FOBmgWCK6A5zBs8umd%2bq%2fc%3d&risl=&pid=ImgRaw&r=0"
+                alt="">
+            <img style="width: 110px; border-radius: 50%;  margin-top: -10%;border: 9px solid rgb(87, 117, 117);"
+               src="https://www.herstoriesproject.com/wp-content/uploads/2018/11/profilepic-square.jpg" alt="">
+            <h1>Elisha Ross</h1><br>
+            <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
+            <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
+            <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
+            <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
+            <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i></i><br><br>
+            <button type="button" class="designer">Follow</button>
+            </div>
+
+            <div style="display: block;" class="products anime design">
+                <img style="width: 300px; height: 40%;object-fit: cover; border-radius: 15px;"
+                src="https://wallpaper-house.com/data/out/6/wallpaper2you_93661.jpg"
+                alt="">
+            <img style="width: 120px; height: 123px; border-radius: 50%;margin-top: -10%;border: 9px solid rgb(87, 117, 117);"
+               src="https://i.pinimg.com/736x/ee/a8/5f/eea85f0334b83c50bf8b5d0ed6cd1be6.jpg" alt="">
+            <h1>Suzu Hirose</h1><br>
+            <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
+            <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
+            <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
+            <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
+            <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i></i><br><br>
+            <button type="button" class="designer">Follow</button>
+            </div>
+
+            <div class="products anime design">
+                <img style="width: 300px; height: 40%; object-fit: cover; border-radius: 15px;"
+                src="https://3.bp.blogspot.com/-qx88NM2Z-Og/UZdtoxM4UJI/AAAAAAAAAQk/HpiqNPUOMu8/s1600/Milan+Mens+Fashion+Week+Salvatore+Ferragamo+Spring-Summer+2013+Runway+Show_0143.JPG"
+                alt="">
+            <img style="width: 115px; border-radius: 50%;margin-top: -10%;border: 9px solid rgb(87, 117, 117);"
+                src="https://darylh.com/wp-content/uploads/2017/05/Profile-Picture-Square.jpg"
+                alt="">
+            <h1>Alex Jhones</h1><br>
+            <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
+            <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
+            <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
+            <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
+            <i class="fa-solid fa-star-half-stroke fa-lg" style="color: #F49D1A;"></i><br><br>
+            <button type="button" class="designer">Follow</button>
+            </div>
+
+            <div class="products anime design"> 
+                <img style="width: 300px; height: 40%; object-fit: cover; border-radius: 15px;object-position: 80% 10%;"
+                src="https://th.bing.com/th/id/OIP.819izbOpgI0Jv0r509nv5QHaHa?pid=ImgDet&rs=1g"
+                alt="">
+            <img style="width: 120px; border-radius: 50%;margin-top: -10%;border: 9px solid rgb(87, 117, 117);"
+                src="https://th.bing.com/th/id/R.5736c0c62fecf9d0e4a05ff53c013d82?rik=qolrV%2bUth%2fOTjA&riu=http%3a%2f%2fghost.skillshub.info%2fcontent%2fimages%2f2017%2f01%2fprofile-girl-square.png&ehk=CvxbBHBPKtwBuWfkEI51uhrqJ%2bWQpqLXil9D4Ne1%2bsQ%3d&risl=&pid=ImgRaw&r=0"
+                alt="">
+            <h1>Bella Moore</h1><br>
+            <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
+            <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
+            <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
+            <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
+            <i class="fa-solid fa-star-half-stroke fa-lg" style="color: #F49D1A;"></i><br><br>
+            <button type="button" class="designer">Follow</button>
+        </div>
+
+        <div class="products anime design">
+            <img style="width: 300px; height: 40%; object-fit: cover; border-radius: 15px;"
+            src="https://www.yivadigital.com/uploads/images/20191111/104513_%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20191111104437.jpg"
+            alt="">
+        <img style="width: 110px;height: 110px; border-radius: 50%;margin-top: -10%;border: 9px solid rgb(87, 117, 117);"
+            src="https://static.wixstatic.com/media/809384_268d3d79760f48fc8bf9d85e7b76c516~mv2_d_4912_7360_s_4_2.jpg/v1/fill/w_486,h_480,fp_0.57_0.24,q_90/809384_268d3d79760f48fc8bf9d85e7b76c516~mv2_d_4912_7360_s_4_2.jpg"
+            alt="">
+        <h1>Megan White</h1><br>
+        <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
+        <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
+        <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
+        <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
+        <i class="fa-solid fa-star-half-stroke fa-lg" style="color: #F49D1A;"></i><br><br>
+        <button type="button" class="designer">Follow</button>
+        </div>
+
+        <button type="button" id="pronext" class="prod-but"><i class="fa-solid fa-caret-right fa-xl"></i></button>
+
+        </div>
+    </center><br><br><br>
+
+   
+
+    <div style=" width: 90%;margin-left: 4.3%; margin-bottom: 180px;" class="hbar"></div><br><br><br><br><br>
+
+    <center>
+        <div id="container3">
+            <div class="cards">
+            <div class="shadow"></div> 
+            <img id="wallet" class="card-img"  src="https://www.wpclipart.com/dl.php?img=/money/various/Wallet_T.png" alt=""><br><br>
+            <h1  style="color: azure;">Set up your wallet</h1>
+        <br><br>
+        <p class="card-info"  >We are transforming commerce transactions</p>
+            </div>
+            
+        <div class="cards">
+                <div class="shadow"></div> 
+                <img src="https://www.freeiconspng.com/uploads/pencil-icon-512-17.png" class="card-img"  alt="">
+                <h1  style="color: azure;">Create your own profile</h1>
+        <br><br>
+        <p class="card-info"  >We support designers all over the world</p>
+        </div>
+
+        <div class="cards">
+            <div class="shadow"></div> 
+            <img src="—Pngtree—3d camera with a cute_8706305.png" style="width: 280px;margin-top:-35%;" class="card-img"  alt="">
+            <h1  style="color: azure; margin-top: -15%;">Create your collection</h1>
+    <br><br>
+    <p class="card-info"  >Personalize your fashion space</p>
+        </div>
+        </div>
+    </center>
+
+    <div class="foot">
+
+       </div>
+
+
+
+    <script src="effect.js"></script>
+
+</body>
+
+</html>
