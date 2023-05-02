@@ -57,31 +57,31 @@ let prevslide=()=>{
 }
 
 
-const mode=document.getElementById('mode');
-const model=document.getElementById('mode-l');
-var bgcol=document.documentElement;
+// const mode=document.getElementById('mode');
+// const model=document.getElementById('mode-l');
+// var bgcol=document.documentElement;
 
-let dark=()=>{
-bgcol.style.setProperty("--bgcolor","rgb(9, 8, 19");
-localStorage.setItem("bgcolor","rgb(9, 8, 19");
-}
+// let dark=()=>{
+// bgcol.style.setProperty("--bgcolor","rgb(9, 8, 19");
+// localStorage.setItem("bgcolor","rgb(9, 8, 19");
+// }
 
-let light=()=>{
-    bgcol.style.setProperty("--bgcolor","white");
-    localStorage.setItem("bgcolor","white");
+// let light=()=>{
+//     bgcol.style.setProperty("--bgcolor","white");
+//     localStorage.setItem("bgcolor","white");
 
-}
+// }
 
-let getbg=()=>{
-    var bg=localStorage.getItem('bgcolor');
-    bgcol.style.setProperty("--bgcolor",bg);
-}
+// let getbg=()=>{
+//     var bg=localStorage.getItem('bgcolor');
+//     bgcol.style.setProperty("--bgcolor",bg);
+// }
 
-getbg();
+// getbg();
 
-model.addEventListener("click",light);
+// model.addEventListener("click",light);
 
-mode.addEventListener("click",dark);
+// mode.addEventListener("click",dark);
 
 //changeslide=setInterval(nextslide,intervaltime);
 
