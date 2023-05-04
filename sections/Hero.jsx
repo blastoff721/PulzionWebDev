@@ -22,8 +22,8 @@ const Hero = () => (
           variants={textVariant(1.2)}
           className="flex flex-row justify-center items-center"
         >
-          <h1 className={styles.heroHeading}>Mad</h1>
-          <h1 className={styles.heroHeading}>Ness</h1>
+          <h1 className={styles.heroHeading}>Cra</h1>
+          <h1 className={styles.heroHeading}>Ze</h1>
         </motion.div>
       </div>
 
