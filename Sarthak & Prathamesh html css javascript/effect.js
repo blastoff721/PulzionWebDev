@@ -180,3 +180,48 @@ let nobeat=()=>{
 but.addEventListener("mouseover",beat);
 cart[0].addEventListener("mouseover",beat);
 but.addEventListener("mouseout",nobeat);
+
+var shop=document.getElementById('shop');
+var cat=document.getElementsByClassName('cat');
+var cat2=document.getElementsByClassName('cat2');
+var category=document.getElementsByClassName('category');
+var plst=document.documentElement;
+
+
+
+let pltime=()=>{
+
+    var i=0;
+    while(i<4){
+        cat[i].style.display="block";
+        cat2[i].style.display="block";
+        i++;
+    }
+  
+
+    plst.style.setProperty('--t','-15%')
+}
+
+let revert=()=>{
+    var i=0;
+    while(i<4){
+        cat[i].style.display="none";
+        cat2[i].style.display="none";
+        i++;
+    }
+}
+
+// shop.addEventListener("mouseout",revert);
+shop.addEventListener("mouseover",pltime);
+
+
+var points=document.getElementById('points');
+var ptimg=document.getElementById('pt-img');
+var im=document.documentElement;
+
+let effec=()=>{
+   ptimg.style.display="block";
+   im.style.setProperty('--timg','-5%');
+}
+
+points.addEventListener("mouseover",effec);

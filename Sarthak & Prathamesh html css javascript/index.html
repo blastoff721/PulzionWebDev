@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/2149b27acd.js" crossorigin="anonymous"></script>
     <title>Fabverse</title>
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <style>
     * {
@@ -16,11 +18,20 @@
         box-sizing: border-box;
     }
 
+    html{
+        font-size: 62.5%;
+        font-family: 'Poppins', sans-serif;
+    }
+     
+   
+
     /* body{
         background-color: rgb(9, 8, 19);
     } */
 
     #container {
+
+      
 
         margin: auto;
         max-width: 1400px;
@@ -29,10 +40,10 @@
 
     .slide-cont {
         display: flex;
-        height: 500px;
+        height: 50rem;
+        /* border: 3px solid white; */
         position: relative;
-        margin-top: 50px;
-
+        margin-top: 5rem;
 
     }
 
@@ -47,7 +58,6 @@
         background: transparent;
         height: 50px;
         align-self: center;
-        font-size: x-large;
         position: absolute;
         cursor: pointer;
         padding: 10px;
@@ -87,7 +97,8 @@
     }
 
     body {
-        background:linear-gradient(rgb(3, 3, 74),#31012d,#18002c,#00032a);
+        /* background-color: var(--bgcolor); */
+        background-color: rgb(9, 8, 19);
     }
 
     #mode {
@@ -122,38 +133,40 @@
 
     #container2 {
         display: flex;
-        /* border: 2px solid white; */
-        width: 70%;
-        margin-top: 50px;
-        padding: 10px;
+        justify-content: center;
+        /* border: 5px solid white; */
+        width: 70rem;
+        margin-top: 5rem;
+        padding: 1rem;
         margin: auto;
-        max-width: 1400px;
-        min-width: 1400px;
-        margin-bottom: 250px;
+        /* margin-left: 10rem; */
+        /* max-width: 140rem;
+        min-width: 140rem; */
+        margin-bottom: 25rem;
         position: relative;
     }
 
     .products {
         /* border: 2px solid white; */
-        height: 500px;
-        width: 300px;
-        min-width: 300px;
-        max-width: 300px;
-        margin: 50px;
-        border-radius: 15px;
+        height: 50rem;
+        width: 30rem;
+        min-width: 30rem;
+        max-width: 30rem;
+        margin: 5rem;
+        border-radius: 1.5rem;
         color: aliceblue;
         display: none;
-        box-shadow: 2px 2px 2px 2px rgba(214, 214, 214, 0.2), 0 6px 6px 0 rgba(231, 230, 230, 0.19);
+        box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem rgba(214, 214, 214, 0.2), 0.6rem 0.6rem 0 rgba(231, 230, 230, 0.19);
         position: relative;
     }
 
     .prod-but {
         align-self: center;
-        width: 55px;
-        height: 50px;
-        font-size: x-large;
-        padding: 10px;
-        border-radius: 30px;
+        width: 15rem;
+        height: 5.5rem;
+        font-size: 3rem;
+        padding: 1.2rem;
+        border-radius: 3rem;
         cursor: pointer;
         background-color: antiquewhite;
         opacity: 0.5;
@@ -187,14 +200,14 @@
     }
 
     .designer{
-        margin-top: 30px;
-        width: 120px;
-        height: 50px;
+        margin-top: 3rem;
+        width: 12rem;
+        height: 5rem;
         background: transparent;
-        border: 3px solid white;
+        border: 0.3rem solid white;
         color: white;
-        font-size: large;
-        border-radius: 10px;
+        font-size: 2rem;
+        border-radius: 1rem;
         cursor: pointer;
     }
 
@@ -206,40 +219,49 @@
     }
 
     .cards{
-        width: 380px;
-        height: 250px;
-        min-width: 380px;
-        min-height: 250px;
-        margin: 50px;
-        border-radius: 20px;
+        width: 38rem;
+        height: 25rem;
+        min-width: 38rem;
+        min-height: 25rem;
+        margin: 5rem;
+        border-radius: 2rem;
         background: rgba(0,0,0,0.5);
         background:rgba(127,127,127,0.25);
         border: 1px solid rgba(255, 255, 255, 0.18);
         
+        /* margin-left: 90px; */
+        /* box-shadow: 10px 10px 10px 10px rgba(255, 249, 249, 0.2), 20px 20px 20px 10px rgba(255, 251, 251, 0.19); */
+        
+    }
+
+    .cards h1{
+        font-size: 2.9rem;
+        height: 5rem;
     }
     #container3{
         display: flex;
-        justify-content: center;
-        width: 80%;
-        margin-bottom: 200px;
-   
+        /* justify-content: center; */
+        width: 150rem;
+        margin-bottom: 20rem;
+        /* border: 2px solid white;
+         */
     }
 
    
     .shadow{
-        width: 210px;
-        height: 150px;
+        width: 21rem;
+        height: 15rem;
         background-color: #ce6230;
         position: absolute;
         margin-left:5.5%;
         margin-top:-3% ;
         border-radius: 50%;
-        filter: blur(35px);
+        filter: blur(3.5rem);
         z-index: -1;
     }
 
     .hbar{
-        height: 0.3em;
+        height: 0.5em;
         background: linear-gradient(90deg, rgba(72,252,139,0) 0%,#48fc8b 50%,rgba(72,252,130,0) 100%);
         filter: drop-shadow(0 0 0.5em #48fc8b);
         bottom: -0.5em;
@@ -247,16 +269,16 @@
     }
 
     .vbar{
-        height: 100px;
-        width: 0.3em;
+        height: 10rem;
+        width: 0.5em;
         background: linear-gradient(0deg, rgba(72,252,139,0) 0%,#48fc8b 50%,rgba(72,252,130,0) 100%);
         filter: drop-shadow(0 0 0.5em #48fc8b);
         margin: 0 200px;
     }
 
     .card-info{
-        font-size: 20px;
-         width: 200px; 
+        font-size: 2rem;
+         width: 30rem; 
          color: rgb(139, 141, 141);
     }
 
@@ -269,7 +291,7 @@
     }
 
     .card-img{
-        width: 150px;
+        width: 15rem;
         margin-top: -20%;
         margin-left: 5%;
         position: relative;
@@ -278,15 +300,17 @@
 
 #navbar{
         /* border: 2px solid white; */
+
         text-align: center;
     }
 
   
 
 #navbar ul li a{
+    font-size: 1.9rem;
     display: block;
     text-decoration: none; 
-    font-size: 20px;
+    
     color: whitesmoke;
 }
 
@@ -297,13 +321,14 @@
 }
 
 .item{
-    width: 150px;
-    height: 60px;
+    width: 15rem;
+    height: 9rem;
     text-align: center;
     align-self: center;
-    padding: 20px;
-    margin-left: 20px;
-
+    padding: 2rem;
+    margin-left: 2rem;
+    
+    /* border: 2px solid white; */
 }
 
 #navbar ul li a:hover{
@@ -311,12 +336,19 @@
 }
 
 #decor{
-    height: 700px;
-   
+    font-size: 0.7rem;
+    height: 80rem;
+    margin-bottom: 20rem;
+    /* background-image: url(https://ak.picdn.net/shutterstock/videos/1021881019/thumb/1.jpg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: center;
+    background-size: 100%;  */
+    
+    
 }
 
 .sub-menu-1{
-   
+    /* border: 2px solid white; */
     width: 300px;
     height: 70px;
     /* padding: 10px 10px; */
@@ -358,8 +390,8 @@
 }
 
 h4{
-    margin-left: 52%;
-    font-size: 80px;
+    margin-left: 89rem;
+    font-size: 8rem;
     color: azure;
     top: 0;
   left: 0;
@@ -367,15 +399,15 @@ h4{
 }
 
 #login{
-    width: 100px;
-    height: 40px;
-    border-radius: 10px;
+    width: 10rem;
+    height: 4rem;
+    border-radius: 1rem;
     align-self: center;
     cursor: pointer;
     position: absolute;
-    margin-left: 55%;
+    margin-left: 90rem;
     border: none;
-    font-size: 15px;
+    font-size: 1.5rem;
     font-style: italic;
     font-weight: bold;
     background: linear-gradient(rgb(123, 231, 123),rgb(83, 219, 208));
@@ -387,15 +419,21 @@ color: rgb(255, 247, 247);
 
 
 .join{
-    margin-left: 30px;
-    width:180px;
-    height: 50px;
-    border-radius: 10px;
-    font-size: 18px;
+    margin-left: 78rem;
+    margin-top: 8rem;
+    width:28rem;
+    height: 5rem;
+    border-radius: 1rem;
+    font-size: 1.8rem;
     border: none;
     cursor: pointer;
     font-weight: bold;
     background: linear-gradient(rgb(123, 231, 123),rgb(83, 219, 208));
+}
+
+#customize{
+    margin-left:70rem ;
+    margin-top: 9rem;
 }
 
 .join:hover{
@@ -408,29 +446,33 @@ color: rgb(255, 247, 247);
     height: 600px;
     background:linear-gradient(#461a6b,rgb(96, 58, 231));
 }
+.foott{
+    display: flex;
+    justify-content: center;
+}
+
 
 #search-but{
     font-weight: bold; 
-    font-size: 30px; 
+    font-size: 3rem; 
     background: linear-gradient(rgb(126, 90, 146),rgb(95, 3, 241)) ; 
-    height: 55px;
-    width: 200px;
+    height: 5.5rem;
+    width: 20rem;
      text-align: center;
-     padding: 8px;
-     border-top-left-radius: 5px;
-     border-bottom-left-radius: 5px;
+     padding-left: 1.5rem ;     border-top-left-radius: .5rem;
+     border-bottom-left-radius: .5rem;
      margin-left: 15%;
 }
 
 input{
-    width: 900px;
-    height: 70px;
-    margin-left: 19%;
-    margin-bottom: 10px;
+    width: 90rem;
+    height: 7rem;
+    margin-left: 27rem;
+    margin-bottom: 1rem;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-     padding-left: 20px;
-     font-size: 26px;
+     padding-left: 2rem;
+     font-size: 2.6rem;
      font-weight: bold;
      border: none;
      outline: none;
@@ -444,43 +486,71 @@ input{
 }
 
 #search-icon{
-    height: 70px;
-    width: 70px;
-    padding-top: 24px;
-    padding-left: 15px;
-    margin-left: 18%;
-    margin-right: -19.5%;
+    height: 7rem;
+    width: 7rem;
+    padding-top: 2.7rem;
+    padding-left:2.2rem;
+    margin-left: 28rem;
+    margin-right: -27.2rem;
     border: 2px solid rgb(192, 189, 189);
     background-color: rgb(233, 230, 230);
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
 }
 
-.shop{
+#shop{
     /* border: 2px solid wheat; */
-    width: 100%;
-    height: auto;
-    margin-top: 5%;
-    margin-bottom: 20%;
+    width: 145rem;
+    height: 145rem;
+    margin-top: 30rem;
+    margin-bottom: 10rem;
 }
+ /* name duration timing-function delay iteration-count direction fill-mode; */
+
+.cat,.cat2{
+        animation: shop-trans 5s; 
+        
+        
+    }
+
+    @keyframes shop-trans {
+
+        from {
+            opacity: 0.3;
+            transform: translateX(var(--t));
+        }
+
+        to {
+            opacity: 1;
+        }
+
+    }
 
 .category{
 
 justify-content: center;
-/* border: 2px solid wheat; */
 
+/* border: 2px solid wheat; */
+}
+
+.cat,.cat2{
+    display: none;
 }
 
 .category div {
-    border: 10px solid white;
-    border-bottom: 60px solid white;
-    width: 300px;
-    height: 350px;
-    margin-left: 20px;
-    margin-top: 10px;
+    /* display: none; */
+    border: 0.5rem solid rgb(226, 212, 243);
+    border-bottom: 6rem solid rgb(226, 212, 243);
+    border-radius: 3rem;
+    width: 30rem;
+    height: 35rem;
+    margin-left: 3rem;
+    margin-top: 3rem;
     background-color: rgb(46, 45, 45);
     
 }
+
+
 
 .cat:nth-child(1){
     background-image: url(https://th.bing.com/th/id/OIP.3SxMYr_VjFmvGsOyHaIRFwHaLI?pid=ImgDet&rs=1);
@@ -533,65 +603,315 @@ justify-content: center;
 }
 
 #cart{
-    height: 90px;
-    width: 90px;
-    border-radius: 50%;
+    height: 9rem;
+    width: 9rem;
+    border-radius: 50rem;
     background-color: #d6bb23;
     border: none;
-    margin-left: 90%;
-    margin-top: 40%;
+    margin-left: 150rem;
+    margin-top: 70rem;
     z-index: 100;
     cursor: pointer;
     position: fixed;
     justify-content: center;
-    padding-top: 10px;
+    padding-top: 1rem;
+}
+
+@media (max-width:380px) {
+    html{
+        font-size: 18%;
+       
+    }
+
+    /* body{
+        width: 380px;
+    } */
+
+    #decor{
+        width: 500px;
+        margin-left: -22rem;
+        height: 90rem;
+        border: 2px solid white;
+        
+    }
+    #lady{
+      
+     width: 680px;
+      height: 90rem;
+      
+ 
+    }
+
+    #purple{
+        width: 100rem;
+        height: 90rem;
+    }
+
+    input{
+        width: 80rem;
+        margin-left: 35rem;
+        position: absolute;
+    }
+
+    #search-icon{
+        margin-left: 28.18rem;
+        padding-top: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
+    #login{
+      margin-left: 75rem;
+    }
+
+    #navbar{
+        margin-left: -15rem;
+    }
+
+    .slide-cont{
+      
+        height: 80rem;
+        width: 130rem;
+        margin-left: 2.5rem;
+        
+        /* border: 2px solid white; */
+       
+    }
+
+    
+
+    .img-slider{
+        height: 90rem;
+        width: 140rem;
+        object-fit:cover;
+    }
+
+    #container2{
+        margin-left: 1rem;
+        width: 140rem;
+    }
+
+    .shop{
+    /* border: 2px solid wheat; */
+    margin-left: -8rem;
+    margin-top: 8rem;
+    margin-bottom: 15rem;
+}
+
+#container3{
+    border: 2px solid white;
+    display: block;
+}
+.cards{
+    width: 80rem;
+    height: 50rem;
+    margin-bottom: 10rem ;
+    
+}
+
+.cards h1{
+    font-size: 8rem;
+}
+
+.cards p{
+    font-size: 5rem;
+    width: 75rem;
+}
+
+.cards img{
+    margin-top: -8%;
+}
+
+.shadow{
+    margin-left: 23%;
+}
+
+#cameraa{
+    margin-bottom: -15%; 
+}
+
+
+
+.cards:nth-child(3) h1{
+   margin-bottom: -50rem;
+   margin-top: 100%;
+  
+ 
+}
+
+.card:nth-child(3) p{
+    margin-top: 50rem;
+    /* display:none; */
+    border: 2px solid white;
+}
+
+   
+
+ 
+}
+
+#vbar1{
+    margin-left: 81.9rem;
+    margin-top: -0.2rem;
+    position: absolute;
+}
+
+
+
+
+
+#lady{
+    opacity: 0.75;
+    margin-left: -1rem;
+    z-index: -1; 
+    position: absolute;
+    width:173rem;
+    height: 70rem;
+    object-fit: cover;
+    object-position: -3rem 0.1rem;
+}
+
+#purple{
+    margin-left: -1rem;
+    position: absolute;
+     width:170rem;
+     height: 70rem;
+      opacity: 0.7;
+      z-index: -1; 
+      object-fit: cover;
+}
+
+h1{
+    font-size: 4rem;
+}
+
+#cameraa{
+    width: 28rem;
+    margin-top:-35%;
+}
+
+.cards:nth-child(3) h1{
+    margin-top: -7.8rem;
+}
+
+.foot a{
+    text-decoration: none;
+    margin: 10rem 8rem;
+    background-color: white;
+    padding-left: 2.2rem;
+    padding-top: 2.6rem;
+    color: rgb(9,18,9);
+    font-size: 1.5rem;
+    height: 7rem;
+    width: 7rem;
+    opacity: 0.9;
+    border-radius: 50%;
+}
+
+#email{
+    width: 30rem;
+    border-radius: 1rem;
+    margin-left: 25em;
+}
+
+
+
+#points{
+    display: flex;
+    margin-bottom: 30rem;
+}
+
+#pt-img{
+    width: 70rem;
+    margin-left:4rem ;
+    display: none;
+}
+
+#pt-img{
+        animation: img-trans 3s -1s; 
+        
+        
+    }
+
+    @keyframes img-trans {
+
+        from {
+            opacity: 0.3;
+            transform: translateX(var(--timg));
+        }
+
+        to {
+            opacity: 1;
+        }
+
+    }
+
+
+.pt {
+   margin-top: 3rem;
+    
+}
+.num{
+    width: 8rem;
+    height: 8rem;
+    border-radius: 1rem;
+    margin-left: 10rem;
+    background-color: rgb(68, 66, 66);
+}
+.foott a i:hover{
+    
+    color: rgb(55, 37, 90);
 }
 
 </style>
 
 <body>
     <a href="cart.html">
-        <button id="cart"></button>
-            <i class="fa-solid fa-cart-shopping fa-2xl" style="color: #312c01;"></i>
-        </button>
+    <button id="cart">
+        <i class="fa-solid fa-cart-shopping fa-2xl" style="color: #312c01;"></i>
+    </button>
     </a>
 
 <div id="decor">
+    <img id="lady"  src="https://www.fashiongonerogue.com/wp-content/uploads/2014/12/nicki-minaj-roberto-cavalli-spring-2015-ad-campaign02-600x441.jpg" alt="">
+    <img id="purple"  src="https://ak.picdn.net/shutterstock/videos/1021881019/thumb/1.jpg" alt="">
     <div id="navbar">
-        <img style=" opacity: 0.75; margin-left: -30%; z-index: -1; position: absolute;width:100%;height: 700px;object-fit: cover;object-position: 80% 7%;" src="https://www.fashiongonerogue.com/wp-content/uploads/2014/12/nicki-minaj-roberto-cavalli-spring-2015-ad-campaign02-600x441.jpg" alt="">
-        <img style="margin-left: -30%;position: absolute; width:100%;height: 700px; opacity: 0.7;z-index: -1; object-fit: cover;" src="https://ak.picdn.net/shutterstock/videos/1021881019/thumb/1.jpg" alt="">
-
+        <!-- <div id="logo">
+            <img src="./IMAGES/LOGO1.png" alt="">
+        </div> -->
+        <!-- <div id="logo">
+            <img src="./IMAGES/logo22.jpg" alt="">
+        </div> -->
         <ul id="list" style="margin-top: 3%;">
             <li class="item"><a href="#">Home</a></li>
             <li id="pro" class="item"><a href="#">Products</a>
                 <div class="sub-menu-1">
                     <ul id="sub">
-                        <li  class="item1"><a href="collections.html">Latest Collections</a></li>
-                        <li  class="item1"><a href="#">Latest Designs</a></li>
-                        <li  class="item1" style="border: none;"><a href="#">Famous Designs</a></li>
+                        <li  class="item1"><a href="#">Latest Collections</a></li>
+                        <li  class="item1"><a href="#">Popular Designs</a></li>
+                        <li  class="item1" style="border: none;"><a href="#">Trending Designs</a></li>
                     </ul>
                 </div>
             
             </li>
 
-            <li class="item"><a href="http://localhost:3000">About Us</a></li>
-            
+            <li class="item"><a href="http://localhost:3000/">About Us</a></li>
             <li class="item"><a href="#">Contact Us</a></li>
             <button type="button" id="login">Login</button>
         </ul>
     </div>
 <br><br><br><br><br>
 
-<p style="width: 250px; margin-left: 32%;margin-top: 15px;position: absolute; font-size: 20px;color: rgb(192, 197, 197);" >Select and browse through latest fashions.Be most trendy in town </p>
-<div style="margin-left: 49%;margin-top:-2px;position: absolute;" class="vbar"></div>
-<h4>BE TRENDY</h4>
+<p style="width: 25rem; margin-left: 53rem;margin-top: 1.5rem;position: absolute; font-size: 2rem;color: rgb(192, 197, 197);" >Select and browse through latest fashions.Be most trendy in town </p>
+<div  id="vbar1" class="vbar"></div>
+<h4 class="bold" >BE TRENDY</h4>
 
-<h4 style="margin-left: 30%;margin-top: 100px;" >BE BOLD</h4>
-<div style="margin-left:55%;margin-top:-6%;position: absolute;" class="vbar"></div>
-<p style="width: 250px; margin-left: 58%;margin-top: -5%;position: absolute; font-size: 20px;color: rgb(192, 197, 197);" >Don't bound yourself with orthodox styles. Go strong, go bold.</p>
+<h4 class="bold" style="margin-left: 52rem;margin-top: 10rem;" >BE BOLD</h4>
+<div style="margin-left:92rem;margin-top:-10rem;position: absolute;" class="vbar"></div>
+<p style="width: 25rem; margin-left: 98rem;margin-top: -8rem;position: absolute; font-size: 2rem;color: rgb(192, 197, 197);" >Don't bound yourself with orthodox styles. Go strong, go bold.</p>
 
-<button class="join" style=" margin-left:40% ;margin-top: 5%;" >Customize outfits</button> 
-<button class="join" style="background: transparent;border :3px solid rgb(123, 231, 123); color: aliceblue; " >Learn More</button>
+<!-- <button class="join" id="customize"  >Customize outfits</button>  -->
+<a href="collections.html"><button class="join" style="background: transparent;border :.3rem solid rgb(123, 231, 123); color: aliceblue; " > Trending Collections</button>
+</a>
 
 </div>
   
@@ -608,24 +928,26 @@ justify-content: center;
 
   <div class="srch">
     <form style="display: flex;" action="">
-        <div id="search-icon"><i class="fa-solid fa-magnifying-glass fa-2xl" style="color: rgb(0, 0, 0);" ></i></div>
+        <div id="search-icon"><i class="fa-solid fa-magnifying-glass fa-2xl" style="color: rgb(110, 107, 107);" ></i></div>
         <input type="search" placeholder="Search for products,artists,collections and more..." >
     </form>
    
   </div>
 
+  <h2 style=" width: 50rem;font-size: 4rem; color: rgb(168, 164, 164);">♦ Latest trends</h2>
+
 
         <div class="slide-cont">
-            <img style="width: 1400px; height: 500px; display: block;object-position: 10% 19%;"
+            <img style="width: 140rem; height: 50rem; display: block;object-position: 10% 19%;"
                 src="https://th.bing.com/th/id/R.4b72d6d83fe02ad44c11972bfabd4d24?rik=b%2bDiafYHC4N2Dg&riu=http%3a%2f%2fv3wall.com%2fwallpaper%2f1024_768%2f1103%2f1024_768_20110304122225220036.jpg&ehk=h0FlvsKJJNrsiGKuLkFGnUVnon%2f0aec0%2fDKLV%2fUrKqo%3d&risl=&pid=ImgRaw&r=0" alt=""
                 class="img-slider smooth">
-            <img style="width: 1400px; height: 500px;"
+            <img style="width: 140rem; height: 50rem;"
                 src="https://3.bp.blogspot.com/-7LgXrheMXS4/WMLSHTntRSI/AAAAAAAAAPM/EuOEE6kaZck4gX4_Nimo4SLYHRs6yTrfwCLcB/s1600/IMG_1049913.jpg"
                 alt="" class="img-slider smooth">
-            <img style="width: 1400px; height: 500px; object-position: 80% 40%;"
+            <img style="width: 140rem; height: 50rem; object-position: 80% 40%;"
                 src="https://th.bing.com/th/id/R.768a408878f77635eb932471d5a8ea83?rik=X0U3gy%2btz5KUDg&riu=http%3a%2f%2fwww.v3wall.com%2fwallpaper%2f1024_768%2f1103%2f1024_768_20110302121006611376.jpg&ehk=q6bTPjkY%2bu9T7%2faBfHa8VshysJ0aA7jBdH9HOC4BkK8%3d&risl=&pid=ImgRaw&r=0" alt=""
                 class="img-slider smooth">
-            <img style="width: 1400px; height: 500px;object-position: 80% 30%;" src="https://thumbs.dreamstime.com/b/fashion-couple-white-background-valentine-s-day-fashion-couple-white-background-valentine-s-day-beautiful-fashion-105077029.jpg" alt=""
+            <img style="width: 140rem; height: 50rem;object-position: 80% 30%;" src="https://thumbs.dreamstime.com/b/fashion-couple-white-background-valentine-s-day-fashion-couple-white-background-valentine-s-day-beautiful-fashion-105077029.jpg" alt=""
                 class="img-slider smooth">
 
             <button type="button" class="slide-but" onclick="prevslide()" id="prev"><i
@@ -638,25 +960,25 @@ justify-content: center;
     </main><br><br><br><br><br>
 
     <center>
-        <div class="shop">
-            <h4 style="margin-left: 3%;margin-bottom: 50px;" >Shop by categories</h4>
-            <div class="hbar" style="width: 850px; margin-bottom: 150px; margin-left: 15%;"></div>
+        <div id="shop">
+            <h4 style="margin-left: 3rem;margin-bottom: 5rem;" >Shop by categories</h4>
+            <div class="hbar" style="width: 85rem; margin-bottom: 15rem; margin-left: 26rem;"></div>
             <table class="cat-table" >
                 <tr >
                     <div class="category" style="display: flex;" >
-                    <div class="cat"><h4 style=" font-size: 30px; margin-left: -1%;margin-top:104%;color: black; width: 95%;" >Women</h4></div>
-                    <div class="cat"> <h4 style=" font-size: 30px; margin-left: -1%;margin-top:104%;color: black; width: 95%;" >Footwear</h4></div>
-                    <div class="cat"> <h4 style=" font-size: 30px; margin-left: -1%;margin-top:104%;color: black; width: 95%;" >Hand Bags</h4></div>
-                    <div class="cat"> <h4 style=" font-size: 30px; margin-left: -1%;margin-top:104%;color: black; width: 95%;" >Ethnic</h4></div>
+                    <div class="cat"><h4 style=" font-size: 3rem; margin-left: -1%;margin-top:104%;color: black; width: 95%;" >Women</h4></div>
+                    <div class="cat"> <h4 style=" font-size: 3rem; margin-left: -1%;margin-top:104%;color: black; width: 95%;" >Footwear</h4></div>
+                    <div class="cat"> <h4 style=" font-size: 3rem; margin-left: -1%;margin-top:104%;color: black; width: 95%;" >Hand Bags</h4></div>
+                    <div class="cat"> <h4 style=" font-size: 3rem; margin-left: -1%;margin-top:104%;color: black; width: 95%;" >Ethnic</h4></div>
                 </div>
                 </tr>
 
                 <tr >
                     <div class="category" style="display: flex;" >
-                    <div class="cat2"><h4 style=" font-size: 30px; margin-left: -1%;margin-top:104%;color: black; width: 95%;" >Men</h4></div>
-                    <div class="cat2"><h4 style=" font-size: 30px; margin-left: -1%;margin-top:104%;color: black; width: 95%;" >Shoes</h4></div>
-                    <div class="cat2"><h4 style=" font-size: 30px; margin-left: -1%;margin-top:104%;color: black; width: 95%;" >Formals</h4></div>
-                    <div class="cat2"><h4 style=" font-size: 30px; margin-left: -1%;margin-top:104%;color: black; width: 95%;" >Traditionals</h4></div>
+                    <div class="cat2"><h4 style=" font-size: 3rem; margin-left: -1%;margin-top:104%;color: black; width: 95%;" >Men</h4></div>
+                    <div class="cat2"><h4 style=" font-size: 3rem; margin-left: -1%;margin-top:104%;color: black; width: 95%;" >Shoes</h4></div>
+                    <div class="cat2"><h4 style=" font-size: 3rem; margin-left: -1%;margin-top:104%;color: black; width: 95%;" >Formals</h4></div>
+                    <div class="cat2"><h4 style=" font-size: 3rem; margin-left: -1%;margin-top:104%;color: black; width: 95%;" >Traditionals</h4></div>
                 </div>
                     
                 </tr>
@@ -664,104 +986,135 @@ justify-content: center;
         </div>
     </center>
 
+
+
+    <center>
+        <div id="points">
+            <img id="pt-img" src="WhatsApp Image 2023-05-05 at 11.50.41 AM.jpeg" alt="">
+            <div id="pts" >
+                <h1 style="color: white;font-size: 8rem;text-align: left;width: 80rem;margin-left: 4rem;" >Get started with just a few clicks</h1>
+                <div class="pt" style="display: flex;">
+                    <div class="num"><h1 style="color: white;margin-top: 1.5rem;">01</h1></div>
+                    <p style="margin-top: 1rem; align-self: center; color: rgb(207, 200, 200);font-size: 2.5rem;margin-left: 2rem;">Find a fashion that <b>suits you</b> </p>
+                </div>
+
+                <div class="pt" style="display: flex;">
+                    <div class="num"><h1 style="color: white;margin-top: 1.5rem;">02</h1></div>
+                    <p style="margin-top: 1rem; align-self: center; color: rgb(207, 200, 200);font-size: 2.5rem;margin-left: 2rem;">Try clothes using <b>AI</b> and reach your designer </p>
+                </div>
+
+                <div class="pt" style=" display: flex;">
+                    <div class="num"><h1 style="color: white;margin-top: 1.5rem;">03</h1></div>
+                    <p style="margin-top: 1rem; text-align: left; align-self: center; color: rgb(207, 200, 200);font-size: 2.5rem;margin-left: 2rem;">No need to push around the bush,directly <b> purchase from designer</b> </p>
+                </div>
+
+            </div>
+
+
+            
+            
+
+        </div>
+    </center>
+
     
     
     <center>
-        <h4 style="margin-left: -0.5%;margin-bottom: 30px;" >Our top designers</h4>
-        <div style="width: 45%;margin-bottom: 130px;" class="hbar"></div>
+        <h4 style="margin-left: -0.5%;margin-bottom: 3rem;" >Our top designers</h4>
+        <div style="width: 70rem;margin-bottom: 13rem;" class="hbar"></div>
         <div id="container2">
             <button type="button" id="proprev" class="prod-but"><i class="fa-solid fa-caret-left fa-xl"></i></button>
             <div style="display: block;" class="products anime design">
-                <img style="width: 300px; height: 40%; object-fit: cover; border-radius: 15px;"
+                <img style="width: 30rem; height: 20rem; object-fit: cover; border-radius: 1.5rem;"
                     src="https://s-media-cache-ak0.pinimg.com/736x/c2/c8/75/c2c875382bad9d7a0c634b920e6f6ca9.jpg"
                     alt="">
-                <img style="width: 110px; border-radius: 50%;margin-top: -10%;border: 9px solid rgb(87, 117, 117);"
+                <img style="width: 11.5rem; border-radius: 50%;margin-top: -10%;border: 0.9rem solid rgb(87, 117, 117);"
                     src="https://th.bing.com/th/id/R.01c7ef78b81c8b939672522a4c6c64e0?rik=WCwi1ncZSJgZ8w&riu=http%3a%2f%2fi.imgur.com%2frDUMj9T.jpg&ehk=aEtfyQ3WVCwED4IdYtPCrqzLmBkDDtZ4r%2f85PaxM2Yo%3d&risl=&pid=ImgRaw&r=0"
                     alt="">
                 <h1>John Allister</h1><br>
-                <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
-                <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
-                <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
-                <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
-                <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i></i><br><br>
+                <i class="fa-solid fa-star fa-2xl" style="color: #F49D1A;"></i>
+                <i class="fa-solid fa-star fa-2xl" style="color: #F49D1A;"></i>
+                <i class="fa-solid fa-star fa-2xl" style="color: #F49D1A;"></i>
+                <i class="fa-solid fa-star fa-2xl" style="color: #F49D1A;"></i>
+                <i class="fa-solid fa-star fa-2xl" style="color: #F49D1A;"></i></i><br><br>
                 <button type="button" class="designer">Follow</button>
             </div>
 
             <div style="display: block;" class="products anime design">
-                <img style="width: 300px; height: 40%; object-fit: cover; border-radius: 15px;"
+                <img style="width: 30rem; height: 20rem; object-fit: cover; border-radius: 1.5rem;"
                 src="https://th.bing.com/th/id/R.e1e7a8b031b7b359d2b9df1262b4f2c2?rik=m8ecFFjXNjpNLA&riu=http%3a%2f%2fcdn.lightgalleries.net%2f4d80d92265da9%2fimages%2fAlex_Perry_0305-1.jpg&ehk=0ljmHddTD1%2fX50uQAhSq8FOBmgWCK6A5zBs8umd%2bq%2fc%3d&risl=&pid=ImgRaw&r=0"
                 alt="">
-            <img style="width: 110px; border-radius: 50%;  margin-top: -10%;border: 9px solid rgb(87, 117, 117);"
+            <img style="width: 11.5rem; border-radius: 50%;  margin-top: -10%;border: .9rem solid rgb(87, 117, 117);"
                src="https://www.herstoriesproject.com/wp-content/uploads/2018/11/profilepic-square.jpg" alt="">
             <h1>Elisha Ross</h1><br>
-            <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
-            <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
-            <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
-            <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
-            <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i></i><br><br>
+            <i class="fa-solid fa-star fa-2xl" style="color: #F49D1A;"></i>
+            <i class="fa-solid fa-star fa-2xl" style="color: #F49D1A;"></i>
+            <i class="fa-solid fa-star fa-2xl" style="color: #F49D1A;"></i>
+            <i class="fa-solid fa-star fa-2xl" style="color: #F49D1A;"></i>
+            <i class="fa-solid fa-star fa-2xl" style="color: #F49D1A;"></i></i><br><br>
             <button type="button" class="designer">Follow</button>
             </div>
 
             <div style="display: block;" class="products anime design">
-                <img style="width: 300px; height: 40%;object-fit: cover; border-radius: 15px;"
+                <img style="width: 30rem; height: 20rem;object-fit: cover; border-radius: 1.5rem;"
                 src="https://wallpaper-house.com/data/out/6/wallpaper2you_93661.jpg"
                 alt="">
-            <img style="width: 120px; height: 123px; border-radius: 50%;margin-top: -10%;border: 9px solid rgb(87, 117, 117);"
+            <img style="width: 12rem; height: 12.8rem; border-radius: 50%;margin-top: -10%;border: 0.9rem solid rgb(87, 117, 117);"
                src="https://i.pinimg.com/736x/ee/a8/5f/eea85f0334b83c50bf8b5d0ed6cd1be6.jpg" alt="">
             <h1>Suzu Hirose</h1><br>
-            <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
-            <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
-            <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
-            <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
-            <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i></i><br><br>
+            <i class="fa-solid fa-star fa-2xl" style="color: #F49D1A;"></i>
+            <i class="fa-solid fa-star fa-2xl" style="color: #F49D1A;"></i>
+            <i class="fa-solid fa-star fa-2xl" style="color: #F49D1A;"></i>
+            <i class="fa-solid fa-star fa-2xl" style="color: #F49D1A;"></i>
+            <i class="fa-solid fa-star fa-2xl" style="color: #F49D1A;"></i></i><br><br>
             <button type="button" class="designer">Follow</button>
             </div>
 
             <div class="products anime design">
-                <img style="width: 300px; height: 40%; object-fit: cover; border-radius: 15px;"
+                <img style="width: 30rem; height: 20rem; object-fit: cover; border-radius: 15px;"
                 src="https://3.bp.blogspot.com/-qx88NM2Z-Og/UZdtoxM4UJI/AAAAAAAAAQk/HpiqNPUOMu8/s1600/Milan+Mens+Fashion+Week+Salvatore+Ferragamo+Spring-Summer+2013+Runway+Show_0143.JPG"
                 alt="">
-            <img style="width: 115px; border-radius: 50%;margin-top: -10%;border: 9px solid rgb(87, 117, 117);"
+            <img style="width: 11rem; border-radius: 50%;margin-top: -10%;border: 9px solid rgb(87, 117, 117);"
                 src="https://darylh.com/wp-content/uploads/2017/05/Profile-Picture-Square.jpg"
                 alt="">
             <h1>Alex Jhones</h1><br>
-            <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
-            <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
-            <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
-            <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
-            <i class="fa-solid fa-star-half-stroke fa-lg" style="color: #F49D1A;"></i><br><br>
+            <i class="fa-solid fa-star fa-2xl" style="color: #F49D1A;"></i>
+            <i class="fa-solid fa-star fa-2xl" style="color: #F49D1A;"></i>
+            <i class="fa-solid fa-star fa-2xl" style="color: #F49D1A;"></i>
+            <i class="fa-solid fa-star fa-2xl" style="color: #F49D1A;"></i>
+            <i class="fa-solid fa-star-half-stroke fa-2xl" style="color: #F49D1A;"></i><br><br>
             <button type="button" class="designer">Follow</button>
             </div>
 
             <div class="products anime design"> 
-                <img style="width: 300px; height: 40%; object-fit: cover; border-radius: 15px;object-position: 80% 10%;"
+                <img style="width: 30rem; height: 20rem; object-fit: cover; border-radius: 15px;object-position: 80% 10%;"
                 src="https://th.bing.com/th/id/OIP.819izbOpgI0Jv0r509nv5QHaHa?pid=ImgDet&rs=1g"
                 alt="">
-            <img style="width: 120px; border-radius: 50%;margin-top: -10%;border: 9px solid rgb(87, 117, 117);"
+            <img style="width: 12.3rem; border-radius: 50%;margin-top: -10%;border: 9px solid rgb(87, 117, 117);"
                 src="https://th.bing.com/th/id/R.5736c0c62fecf9d0e4a05ff53c013d82?rik=qolrV%2bUth%2fOTjA&riu=http%3a%2f%2fghost.skillshub.info%2fcontent%2fimages%2f2017%2f01%2fprofile-girl-square.png&ehk=CvxbBHBPKtwBuWfkEI51uhrqJ%2bWQpqLXil9D4Ne1%2bsQ%3d&risl=&pid=ImgRaw&r=0"
                 alt="">
             <h1>Bella Moore</h1><br>
-            <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
-            <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
-            <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
-            <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
-            <i class="fa-solid fa-star-half-stroke fa-lg" style="color: #F49D1A;"></i><br><br>
+            <i class="fa-solid fa-star fa-2xl" style="color: #F49D1A;"></i>
+            <i class="fa-solid fa-star fa-2xl" style="color: #F49D1A;"></i>
+            <i class="fa-solid fa-star fa-2xl" style="color: #F49D1A;"></i>
+            <i class="fa-solid fa-star fa-2xl" style="color: #F49D1A;"></i>
+            <i class="fa-solid fa-star-half-stroke fa-2xl" style="color: #F49D1A;"></i><br><br>
             <button type="button" class="designer">Follow</button>
         </div>
 
         <div class="products anime design">
-            <img style="width: 300px; height: 40%; object-fit: cover; border-radius: 15px;"
+            <img style="width: 30rem; height: 20rem; object-fit: cover; border-radius: 15px;"
             src="https://www.yivadigital.com/uploads/images/20191111/104513_%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20191111104437.jpg"
             alt="">
-        <img style="width: 110px;height: 110px; border-radius: 50%;margin-top: -10%;border: 9px solid rgb(87, 117, 117);"
+        <img style="width: 11rem;height: 11rem; border-radius: 50%;margin-top: -10%;border: 9px solid rgb(87, 117, 117);"
             src="https://static.wixstatic.com/media/809384_268d3d79760f48fc8bf9d85e7b76c516~mv2_d_4912_7360_s_4_2.jpg/v1/fill/w_486,h_480,fp_0.57_0.24,q_90/809384_268d3d79760f48fc8bf9d85e7b76c516~mv2_d_4912_7360_s_4_2.jpg"
             alt="">
         <h1>Megan White</h1><br>
-        <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
-        <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
-        <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
-        <i class="fa-solid fa-star fa-lg" style="color: #F49D1A;"></i>
-        <i class="fa-solid fa-star-half-stroke fa-lg" style="color: #F49D1A;"></i><br><br>
+        <i class="fa-solid fa-star fa-2xl" style="color: #F49D1A;"></i>
+        <i class="fa-solid fa-star fa-2xl" style="color: #F49D1A;"></i>
+        <i class="fa-solid fa-star fa-2xl" style="color: #F49D1A;"></i>
+        <i class="fa-solid fa-star fa-2xl" style="color: #F49D1A;"></i>
+        <i class="fa-solid fa-star-half-stroke fa-2xl" style="color: #F49D1A;"></i><br><br>
         <button type="button" class="designer">Follow</button>
         </div>
 
@@ -770,9 +1123,9 @@ justify-content: center;
         </div>
     </center><br><br><br>
 
-   
+     <h4 style="margin-left: 58rem;margin-bottom: 3rem;">Personalization</h4>
 
-    <div style=" width: 90%;margin-left: 4.3%; margin-bottom: 180px;" class="hbar"></div><br><br><br><br><br>
+    <div style=" width: 90%;margin-left: 4.3%; margin-bottom: 18rem;" class="hbar"></div><br><br><br><br><br>
 
     <center>
         <div id="container3">
@@ -794,15 +1147,26 @@ justify-content: center;
 
         <div class="cards">
             <div class="shadow"></div> 
-            <img src="—Pngtree—3d camera with a cute_8706305.png" style="width: 280px;margin-top:-35%;" class="card-img"  alt="">
-            <h1  style="color: azure; margin-top: -15%;">Create your collection</h1>
+            <img src="—Pngtree—3d camera with a cute_8706305.png"  id="cameraa" class="card-img"  alt="">
+            <h1  style="color: azure; ">Create your own collection</h1>
     <br><br>
-    <p class="card-info"  >Personalize your fashion space</p>
+    <p class="card-info">Personalize your fashion space</p>
         </div>
         </div>
     </center>
 
     <div class="foot">
+        <div class="foott">
+            <a href="#"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter fa-2xl"></i></a>
+            <a href="#" ><i class="fa-brands fa-google fa-2xl"></i></a>
+        </div>
+
+        <input type="search" id="email" placeholder="Enter your Email id..">
+        <button style="margin-left: -1rem; margin-top: 0.1rem; border: none;border-top-right-radius: 1rem;border-bottom-right-radius: 1rem; width: 10rem;height: 7rem; position: absolute; background: linear-gradient(rgb(54, 216, 54),rgb(114, 253, 242));font-size: 2.5rem; color: rgb(37, 34, 34);" type="submit" >Send</button>
+
+        <h2 style="background-color: rgb(14, 3, 54);  margin-top: 10rem; font-size: 2.5rem; text-align: center; color: white;">Copyright &copy; 2023 Designed by Fabverse. All rights reserved</h2>
 
        </div>
 
