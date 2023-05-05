@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { TypingText } from '../components';
 
 import styles from '../styles';
 import { fadeIn, staggerContainer } from '../utils/motion';
@@ -23,14 +22,10 @@ const About = () => (
       >
         <span className="font-extrabold text-white">Fabverse</span> is a new
         thing in the future, where you can enjoy the virtual world fashion trends by feeling
-        like it's really real. We are dedicated to providing a platform for emerging and established fashion designers to showcase their unique creations and connect with potential buyers who appreciate and value original, high-quality fashion. You can access
+        like it's really real. We are dedicated to providing a platform for emerging and established fashion designers to showcase their unique creations and connect with potential buyers who appreciate and value original, high-quality fashion
         <span className="font-extrabold text-white">
-          , Fabverse
-        </span>{' '}
-        today, you can access{' '}
-        <span className="font-extrabold text-white">fashion</span> through independent creators
-        and easily explore the fabverse world you want, turn your dreams into
-        reality. Let's{' '}
+        </span>{' '}{' '}
+        <span className="font-extrabold text-white"></span> Let's{' '}
         <span className="font-extrabold text-white">explore</span> the new
         fabverse by scrolling down
       </motion.p>

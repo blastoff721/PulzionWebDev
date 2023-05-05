@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 import styles from '../styles';
 import { newFeatures } from '../constants';
-import { NewFeatures, TitleText, TypingText } from '../components';
+import { NewFeatures, TitleText } from '../components';
 import { planetVariants, staggerContainer, fadeIn } from '../utils/motion';
 
 const WhatsNew = () => (
@@ -20,7 +20,7 @@ const WhatsNew = () => (
         variants={fadeIn('right', 'tween', 0.2, 1)}
         className="flex-[0.95] flex justify-center flex-col"
       >
-        <TitleText title={<>What's new about Fabverse?</>} />
+        <TitleText title={<>What's new about Us?</>} />
         <div className="mt-[48px] flex flex-wrap justify-between gap-[24px]">
           {newFeatures.map((feature) => (
             <NewFeatures key={feature.title} {...feature} />
