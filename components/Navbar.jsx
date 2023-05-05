@@ -1,9 +1,6 @@
 'use client';
-//This will allow us to use react components directly from the server.
 
 import { motion } from 'framer-motion';
-//now we can use <motion.nav
-
 import styles from '../styles';
 import { navVariants } from '../utils/motion';
 
