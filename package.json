@@ -14,7 +14,9 @@
     "framer-motion": "^7.6.7",
     "next": "13.0.3",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "strapi": "^3.6.11",
+    "strapi-sdk-javascript": "^0.3.3"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
