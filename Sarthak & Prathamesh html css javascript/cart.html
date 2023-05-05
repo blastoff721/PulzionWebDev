@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    body{
+        background-color: rgb(9,8,19);
+    }
+.searchbar{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    
+}
+input{
+    outline: none;
+    font-size: 1.2rem;
+    width: 45%;
+    background: transparent;
+    color: wheat;
+    border: 1.5px solid whitesmoke;
+    border-radius: 10px;
+
+}
+.searchbar button{
+    outline: none;
+    font-size: 1.2rem;
+    margin-left: 5px;
+    border: 1.5px solid white;
+    background: transparent;
+    color: whitesmoke;
+    border-radius: 10px;
+    height: 30px;
+}
+button:hover{
+    cursor: pointer;
+    padding: 2px;
+}
+.cont01{
+    display: block;
+
+}
+.sarthak{
+    width: 94%;
+    height: 400px;
+    /* border: 2px solid black; */
+    margin: 40px;
+     background-color: antiquewhite;
+     border-radius: 10px;
+     display: flex;
+}
+.img{
+  
+  margin: 2px;
+  
+ 
+}
+
+.img3{
+    width: 30%;
+    margin: 29px;
+    object-fit: cover;
+}
+.kok{
+    object-fit: cover;
+    object-position: 80% 40%;
+  
+    border-radius: 10px;
+}
+.gojo{
+    margin-left: 165px;
+}
+.sarthak button:hover{
+    background-color: rgb(248, 229, 201);
+    color: black;
+    box-shadow: 0 3px 3px 0 rgb(75, 73, 73),0 10px 10px 0 rgb(123, 120, 120);
+    cursor: pointer;
+    box-shadow: 2px;
+}
+.gojo{
+    background: transparent;
+    color: rgb(13, 11, 29);
+    font-size: 18px;
+    font-weight: 500;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px 5px;
+}
+img:hover{
+    /* padding: 5px; */
+    box-shadow: 0 6px 8px 0 rgba(38, 13, 230, 0.2), 0 10px 20px 0 rgba(40, 40, 205, 0.19); 
+}
+.wish{
+    color: white;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 3rem;
+}
+.cont02{
+    display: flex;
+    justify-content: space-between;
+}
+.sarthak1{
+    width: 100%;
+    height: 425px;
+    /* border: 2px solid black; */
+    margin: 40px;
+     background-color: antiquewhite;
+     border-radius: 10px;
+}
+.img1{
+  
+  margin: 2px;
+  
+ 
+}
+
+.img4{
+    margin: 29px;
+    object-fit: cover;
+}
+.kok1{
+    object-fit: cover;
+    object-position: 80% 40%;
+  
+    border-radius: 10px;
+}
+.gojo1{
+    margin-left: 165px;
+}
+.sarthak1 button:hover{
+    background-color: rgb(248, 229, 201);
+    color: black;
+    box-shadow: 0 3px 3px 0 rgb(75, 73, 73),0 10px 10px 0 rgb(123, 120, 120);
+    cursor: pointer;
+    box-shadow: 2px;
+}
+.gojo1{
+    background: transparent;
+    color: rgb(13, 11, 29);
+    font-size: 18px;
+    font-weight: 500;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px 5px;
+    margin-top: 20px;
+}
+#quantity{
+    margin-left: 5px;
+    border: 1px solid black;
+    color: black;
+}
+button{
+    color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-top: 40px;
+    margin-left: 10px;
+    position: relative;
+}
+.price h1{
+    margin-left: 60px;
+    margin-top: 50px;
+}
+.divlinks{
+    margin-right: 25px;
+    list-style: none;
+
+}
+.divlinks ul{
+    display: block;
+    margin-top: 6px;
+}
+.divlinks ul li a{
+    font-size: 1.6rem;
+    color: white;
+    opacity: 1;
+    text-decoration: none;
+    margin: 20px 20px;
+    padding: 2px;
+
+}
+.divlinks ul li a:hover{
+    color: beige;
+    box-shadow: 0 6px 8px 0 rgba(38, 13, 230, 0.2), 0 10px 20px 0 rgba(40, 40, 205, 0.19); 
+}
+footer{
+    background-color:  rgb(13, 12, 27);
+    padding: 0px;
+    margin: 0px;
+}
+.footercontainer{
+    width: 100%;
+    padding: 50px 10px 50px;
+}
+.socialIcons{
+    display: flex;
+    justify-content: center;
+    
+}
+.socialIcons a {
+    text-decoration: none;
+    margin: 43px 6px;
+    background-color: white;
+    padding: 10px;
+    color: rgb(9,18,9);
+    border-radius: 50%;
+}
+.socialIcons a{
+    font-size: 1.6rem;
+    opacity: 0.9;
+}
+.socialIcons a:hover{
+   
+    background-color: rgb(9,18,9);
+    color: white;
+    transition: 0.5s;
+}
+.socialIcons a:hover i{
+    color: wheat;
+}
+.footernav{
+    margin-left: 25px;
+    list-style: none;
+
+}
+.footernav ul{
+    display: block;
+    margin-top: 6px;
+}
+.footernav ul li a{
+    font-size: 1.6rem;
+    color: white;
+    opacity: 1;
+    text-decoration: none;
+    margin: 20px 20px;
+    padding: 2px;
+
+}
+.footernav ul li a:hover{
+    color: beige;
+    box-shadow: 0 6px 8px 0 rgba(38, 13, 230, 0.2), 0 10px 20px 0 rgba(40, 40, 205, 0.19); 
+}
+.footerbottom{
+text-align: center;
+background-color: rgb(9,8,19);
+color: whitesmoke;
+font-size: 1.0rem;
+margin-top: 10px;
+}
+.footerbottom p{
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+
+</style>
+<body>
+   
+  
+    <div class="searchbar">
+            <input style="padding-left: 20px; height: 50px; " type="search" placeholder="Search for products,artists,collections and more....">
+            
+    </div>
+    <div class="cont01">
+        
+        <div class="sarthak">
+            <div class="img3">
+                <img class="kok" height="300px" width="100%" src="imag/17.jpg"  alt=""  >
+            </div>
+            <div class="content">
+            <h1><b>Blue Denim Jacket</b></h1>
+            
+            <p style="font-size: 1.2rem;">Blue colour Denim Jacket with brown sleeves and Men's regular fit long sleeve button down pannel , <br> Lightweight Trucker Jacket.</p>
+            <p>In Stock</p>
+            <br>
+           <div class="conten" style="display: flex; ">
+            <label for="Quantity" style="font-size: 1.6rem;"><b> Quantity</b></label>
+            <div><input type="number" name="quantity" id="quantity" style="width: 50px; margin-left: 20px;"></div> 
+         </div>
+<div class="buttons">
+            <button type="submit"  style="width: 130px; height: 50px; font-size: 1rem; border: none; background-color:rgb(239, 212, 163); border-radius: 10px; font-weight: bold;">PLACE ORDER</button>
+            <button type="submit"  style="width: 120px; height: 50px; font-size: 1rem; border: none; background-color:rgb(239, 212, 163); border-radius: 10px; font-weight: bold;">REMOVE</button>
+        </div>
+        </div>
+        <div class="price">
+            <h1>$2.89</h1>
+        </div>
+
+        </div>
+        <div class="sarthak">
+            <div class="img3">
+                <img class="kok" height="300px" width="100%" src="imag/16.jpg"  alt=""  >
+            </div>
+            <div class="content">
+            <h1><b>Black Solid Tshirt</b></h1>
+            
+            <p style="font-size: 1.2rem;">Round Neck , Half sleeves , Cotton , Regular , Stylish , Branded solid plain Tshirt for men -Ultra soft,<br> Comfortable , Lightweight Tshirt.</p>
+            <p style="color: red;">*Out Of Stock</p>
+            <br>
+           <div class="conten" style="display: flex; ">
+            <label for="Quantity" style="font-size: 1.6rem;"><b> Quantity</b></label>
+            <div><input type="number" name="quantity" id="quantity" style="width: 50px; margin-left: 20px;"></div> 
+         </div>
+<div class="buttons">
+            <button disabled="disabled"  style="width: 130px; height: 50px; font-size: 1rem; border: none; background-color:rgb(239, 212, 163); border-radius: 10px; font-weight: bold;">PLACE ORDER</button>
+            <button type="submit"  style="width: 120px; height: 50px; font-size: 1rem; border: none; background-color:rgb(239, 212, 163); border-radius: 10px; font-weight: bold;">REMOVE</button>
+        </div>
+        </div>
+        <div class="price">
+            <h1>$1.89</h1>
+        </div>
+
+        </div>
+        <div class="sarthak">
+            <div class="img3">
+                <img class="kok" height="300px" width="100%" src="imag/15.jpg"  alt=""  >
+            </div>
+            <div class="content">
+            <h1><b>Blazzer</b></h1>
+            
+            <p style="font-size: 1.2rem;">Grey colour Blazzer , Men slim fit Blazzer , Classic style type , Closure type Button , Pattern solid , <br> Lightweight Trucker Blazzer.</p>
+            <p>In Stock</p>
+            <br>
+           <div class="conten" style="display: flex; ">
+            <label for="Quantity" style="font-size: 1.6rem;"><b> Quantity</b></label>
+            <div><input type="number" name="quantity" id="quantity" style="width: 50px; margin-left: 20px;"></div> 
+         </div>
+<div class="buttons">
+            <button type="submit" style="width: 130px; height: 50px; font-size: 1rem; border: none; background-color:rgb(239, 212, 163); border-radius: 10px; font-weight: bold;">PLACE ORDER</button>
+            <button type="submit"  style="width: 120px; height: 50px; font-size: 1rem; border: none; background-color:rgb(239, 212, 163); border-radius: 10px; font-weight: bold;">REMOVE</button>
+        </div>
+        </div>
+        <div class="price">
+            <h1>$6.89</h1>
+        </div>
+
+        </div>
+    </div>
+    
+    <div class="wishlist" style="margin-top: 200px;">
+        <br>
+        <hr>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+        <br>
+        <br>
+        <h1 class="wish">WISHLIST</h1>
+        <div class="cont02">
+        
+            <div class="sarthak1">
+                <div class="img4">
+                    <img class="kok1" height="270px" width="100%" src="imag/14.jpg"  alt=""  >
+                    <h2 style="text-align: center; margin-top: 6px;">Casual Must-haves </h2>
+                </div>
+    
+                <button type="button" class="gojo1" style="margin-top: 5px; background-color: rgb(239, 212, 163); border: none; border-radius: 10px; width: 130px; font-weight: bold;">Add to Cart</button>
+            </div>
+            <div class="sarthak1">
+                <div class="img4">
+                    <img class="kok1" height="270px" width="100%" src="imag/13.jpg" alt="" >
+                    <h2 style="text-align: center; margin-top: 6px;">Trendiest Casuals </h2>
+                </div>
+                
+                <button type="button" class="gojo1" style="margin-top: 5px; background-color: rgb(239, 212, 163); border: none; border-radius: 10px; width: 130px; font-weight: bold;">Add to Cart</button>
+            </div>
+            <div class="sarthak1">
+                <div class="img4">
+                    <img class="kok1" height="270px" width="100%" src="imag/11.jpg" alt="" >
+                    <h2 style="text-align: center; margin-top: 6px;">Jack & Jones </h2>
+                </div>
+                <button type="button" class="gojo1"  style="margin-top: 5px; background-color: rgb(239, 212, 163); border: none; border-radius: 10px; width: 130px; font-weight: bold;">Add to Cart</button>
+            </div>
+            
+        </div>
+        <div class="cont02">
+        1
+            <div class="sarthak1">
+                <div class="img4">
+                    <img class="kok1" height="270px" width="100%" src="imag/09.jpg"  alt=""  >
+                    <h2 style="text-align: center; margin-top: 6px;">Accessories </h2>
+                </div>
+                <button type="button" class="gojo1" style="margin-top: 5px; background-color: rgb(239, 212, 163); border: none; border-radius: 10px; width: 130px; font-weight: bold;">Add to Cart</button>
+            </div>
+            <div class="sarthak1">
+                <div class="img4">
+                    <img class="kok1" height="270px" width="100%" src="imag/07.jpg" alt="" >
+                    <h2 style="text-align: center; margin-top: 6px;">International Styles </h2>
+                </div>
+                <p></p>
+                <button type="button" class="gojo1"  style="margin-top: 5px; background-color: rgb(239, 212, 163); border: none; border-radius: 10px; width: 130px; font-weight: bold;">Add to Cart</button>
+            </div>
+            <div class="sarthak1">
+                <div class="img4">
+                    <img class="kok1" height="270px" width="100%" src="imag/08.jpg" alt="" >
+                    <h2 style="text-align: center; margin-top: 6px;">Jackets and Hoodies </h2>
+                </div>
+                <button type="button" class="gojo1"  style="margin-top: 5px; background-color: rgb(239, 212, 163); border: none; border-radius: 10px; width: 130px; font-weight: bold;">Add to Cart</button>
+            </div>
+            
+        </div>
+
+    </div>
+    <hr>
+    <footer>
+        <div class="footercontainer" style="display: flex; justify-content: space-between;">
+       
+       <div class="footernav">
+           <ul>
+               <li style="font-size: 15px;" ><a href="">Home</a></li>
+               <li style="font-size: 15px;"><a href="">About Us</a></li>
+               <li style="font-size: 15px;"><a href="">Contact Us</a></li>
+           </ul>
+       </div>
+       <div class="socialIcons">
+           <a href="#"><i class="fa-brands fa-facebook"></i></a>
+           <a href="#"><i class="fa-brands fa-instagram"></i></a>
+           <a href="#"><i class="fa-brands fa-twitter"></i></a>
+           <a href="#"><i class="fa-brands fa-google"></i></a>
+       </div>
+       <div class="divlinks">
+           <ul>
+               <li><a href="#">FAQ'S</a></li>
+               <li><a href="#">Support</a></li>
+               <li><a href="#">Cookies Policy</a></li>
+               
+           </ul>
+       </div>
+       
+   </div>
+   <div class="footerbottom">
+           <p style="font-size: 1.5rem;">Copyright &copy;2023; Designed By <span class="designer">Fabverse &nbsp;</span> All Rights Reserved.</p>
+       </div>
+       
+       <br>
+   </footer>
+    
+</body>
+</html>
